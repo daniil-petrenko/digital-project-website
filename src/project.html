@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Digital Projects</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<!-- Header -->
+		@@include('html/_header.html')
+
+		<!-- Main Page -->
+		<main class="page">
+			<section class="page__project project">
+				<div class="project__container">
+					<div class="project__content content-project">
+						<h1 data-watch data-watch-once class="content-project__title title">Sample <span class="title_black">Project</span></h1>
+					</div>
+					<div class="project__info info-project">
+						<div class="info-project__image">
+							<img src="img/project/computers.jpg" alt="Computers on the table">
+						</div>
+						<div class="info-project__content content-info-project">
+							<div class="content-info-project__image">
+								<img src="img/project/office.jpg" alt="Office">
+							</div>
+							<p data-watch data-watch-once data-watch-threshold="0.1" class="content-info-project__text">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with.
+							</p>
+						</div>
+						<div class="info-project__image">
+							<img src="img/project/drawing.jpg" alt="Computers on the table">
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		@@include('html/_footer.html')
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

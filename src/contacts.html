@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Digital Projects</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+   <div class="wrapper">
+      <!-- Header -->
+      @@include('html/_header.html')
+
+      <!-- Main Page -->
+      <main class="page">
+         <section class="page__contacts contacts">
+            <div class="contacts__container">
+               <div class="contacts__info info-contacts">
+                  <h1 data-watch data-watch-once class="info-contacts__title title">Contact <span class="title_black">Information</span></h1>
+                  <address class="info-contacts__address address">
+                     <div data-watch data-watch-once class="address__name">
+                        <span class="address_black">Company Name</span>
+                        <br>
+                        1234 Sample Street Austin Texas 76401
+                     </div>
+                     <a data-watch data-watch-once href="tel:5123332222" class="address__phone">512.333.2222</a>
+                     <a data-watch data-watch-once href="mailto:sampleemail@gmail.com" class="address__mail">sampleemail@gmail.com</a>
+                  </address>
+                  <a data-watch data-watch-once href="#popup2" class="info-contacts__button popup-link">Contact US</a>
+               </div>
+               <div class="contacts__iframe">
+                  <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d16391.832891467595!2d-97.7661854786117!3d30.26676705831808!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sua!4v1730195340430!5m2!1sen!2sua"
+                     width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                     referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <!-- Footer -->
+      @@include('html/_footer.html')
+      <!-- Popup 1 -->
+      <div class="popup form-popup" id="popup2">
+         <div class="popup__body form-popup__body">
+            <div class="popup__content form-popup__content">
+               <a href="##" class="popup__close form-popup__close close-popup">
+                  <img src="img/cross.svg" alt="Cross">
+               </a>
+               <h2 class="popup__title form-popup__title">Ask a question</h2>
+               <form action="#" class="form-popup__form form">
+                  <div class="form__item">
+                     <input autocomplete="off" type="text" name="name" placeholder=" " class="form__input">
+                     <label class="form__label" for="name">Name</label>
+                  </div>
+                  <div class="form__item">
+                     <input autocomplete="off" type="text" name="phone" data-error="This field is required!"
+                        data-required="phone" placeholder=" " class="form__input">
+                     <label class="form__label" for="phone">Phone Number<span class="required">*</span></label>
+                  </div>
+                  <div class="form__item">
+                     <input autocomplete="off" type="email" name="email" data-error="This field is required!"
+                        data-required="email" placeholder=" " class="form__input">
+                     <label class="form__label" for="email">E-mail<span class="required">*</span></label>
+                  </div>
+                  <div class="form__item">
+                     <input autocomplete="off" type="text" name="Interested In" placeholder=" " class="form__input">
+                     <label class="form__label" for="Interested In">Interested In</label>
+                  </div>
+                  <div class="form__item">
+                     <textarea autocomplete="off" name="message" data-error="This field is required!"
+                        data-required="text" placeholder=" " class="form__input"></textarea>
+                     <label class="form__label form__label_textarea" for="message">Message<span
+                           class="required">*</span></label>
+                  </div>
+                  <div class="form__item">
+                     <label class="form__checkbox-label">
+                        <input data-required="checkbox" type="checkbox" name="politics-agree"
+                           class="form__checkbox real-checkbox">
+                        <span class="custom-checkbox"></span>
+                        <span>By submitting an application you agree with politics confidentiality</span>
+                     </label>
+                  </div>
+                  <div class="form__item">
+                     <button id="formButton" type="button" data-check-button
+                        class="form-popup__button form__button">Send</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+
+
+      <!-- Popup 2 -->
+      <div class="popup" id="popup">
+         <div class="popup__body">
+            <div class="popup__content">
+               <a href="##" class="popup__close close-popup">
+                  <img src="img/cross.svg" alt="Cross">
+               </a>
+               <div class="popup__image">
+                  <img src="img/main/contact/success.svg" alt="Success">
+               </div>
+               <div class="popup__title">Thank you !</div>
+               <div class="popup__text">
+                  <p>Your message has been sent we will contact you shortly</p>
+               </div>
+               <a href="##" class="popup__button close-popup">COME BACK</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="js/main.js"></script>
+</body>
+
+</html>

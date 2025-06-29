@@ -1,0 +1,42 @@
+
+
+$base-font-size: 16px;
+
+html, body {
+	font-size: $base-font-size;
+}
+
+// Wrapper style
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+}
+.page {
+  flex: 1 1 auto;
+}
+
+// @import './*.scss';
+
+// Gobal SCSS-files imports
+
+// Icon font
+@import './_icons';
+@import './_vars';
+@import './_mixins';
+// @import './_fonts';
+@import './_reset';
+@import './_global';
+
+// Seсtions or Pages SCSS-files imports
+@import './_header';
+@import './_footer';
+@import './_home';
+@import './_gallery';
+@import './_projects';
+@import './_contacts';
+@import './_modal';
+
+// Libs
+// @import './libs/swiper'

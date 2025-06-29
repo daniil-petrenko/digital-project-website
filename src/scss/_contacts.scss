@@ -1,0 +1,137 @@
+.page {
+	&__contacts {}
+}
+.contacts {
+	padding: rem(124) 0 rem(120) 0;
+	@media (max-width: $md3) {
+		padding: rem(100) 0 rem(40) 0;
+	}
+	&__container {
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width: $md3) {
+			flex-direction: column;
+		}
+		@media (min-width: $md3) {
+			align-items: center;
+		}
+	}
+	&__info {}
+	&__iframe {
+		@media (max-width: $md3) {
+			align-self: center;
+		}
+		iframe {
+			@include adaptivValue('width', 600, 300, 1);
+			@include adaptivValue('height', 550, 250, 1);
+		}
+	}
+}
+.info-contacts {
+	@media (max-width: $md3) {
+		margin-bottom: rem(30);
+	}
+	&__title {
+		@media (min-width: $md3) {
+			@include adaptivValue('font-size', 64, 20, 1);
+		}
+		max-width: rem(338);
+		margin-bottom: rem(34);
+      opacity: 0;
+      transform: translate(0, 40%);
+      transition: all 1s ease;
+	}
+	&__address {
+		margin-bottom: rem(34);
+	}
+	&__button {
+		display: flex;
+		align-items: center;
+      gap: rem(20);
+		padding: rem(30) rem(64) rem(30) rem(55);
+		@media (max-width: $md2) {
+			padding: rem(25) rem(44) rem(25) rem(35);
+		}
+		width: max-content;
+		font-size: rem(12);
+		line-height: 100%;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: $whiteColor;
+		background-color: $mainColor;
+      opacity: 0;
+      transform: translate(0, 30%);
+      transition: all 1s ease 0.35s;
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+		&::after {
+			@extend %ic;
+			content: "\e906";
+			font-size: rem(25);
+			transition: transform 0.5s ease;
+		}
+		&:hover {
+			&::after {
+				transform: translate(rem(4));
+			}
+		}
+		@media (max-width: $md3) {
+			justify-content: space-between;
+			width: 100%;
+		}
+	}
+}
+.address {
+	&_black {
+		font-weight: 700;
+		color: $mainColor;
+	}
+	&__name {
+		color: $grayColor;
+		font-style: normal;
+		font-size: rem(18);
+		font-weight: 300;
+		line-height: 141%;
+		@include adaptivValue('margin-bottom', 45, 20, 1);
+		@media (min-width: $md3) {
+			@include adaptivValue('font-size', 18, 8, 1);
+		}
+      opacity: 0;
+      transform: translate(0, 40%);
+      transition: all 1s ease 0.1s;
+	}
+	&__phone {
+		display: block;
+		font-style: normal;
+		font-weight: 700;
+		font-size: rem(18);
+		color: $mainColor;
+		@include adaptivValue('margin-bottom', 45, 20, 1);
+		@media (min-width: $md3) {
+			@include adaptivValue('font-size', 18, 8, 1);
+		}
+      opacity: 0;
+      transform: translate(0, 50%);
+      transition: all 1s ease 0.2s;
+	}
+	&__mail {
+		display: block;
+		font-style: normal;
+		font-weight: 300;
+		color: $mainColor;
+      opacity: 0;
+      transform: translate(0, 50%);
+      transition: all 1s ease 0.3s;
+	}
+}
+
+.info-contacts__title._active,
+.address__name._active,
+.address__phone._active,
+.address__mail._active,
+.info-contacts__button._active {
+   opacity: 1;
+   transform: translate(0, 0);
+}
