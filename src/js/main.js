@@ -127,25 +127,6 @@ const headerObserver = new IntersectionObserver(callback);
 headerObserver.observe(headerElement);
 
 
-const currentPage = window.location.pathname;
-
-function linkActiveRemove() {
-   const currentLink = document.querySelector('a._active');
-   currentLink.classList.remove('_active');
-   return currentLink;
-}
-
-if (currentPage === '/gallery.html') {
-   linkActiveRemove();
-   document.querySelector('a[href="gallery.html"]').classList.add('_active');
-} else if (currentPage === '/projects.html' || currentPage === '/project.html') {
-   linkActiveRemove();
-   document.querySelector('a[href="projects.html"]').classList.add('_active');
-} else if (currentPage === '/contacts.html') {
-   linkActiveRemove();
-   document.querySelector('a[href="contacts.html"]').classList.add('_active');
-}
-
 // =================== Spoilers ===================
 // componentSpoilers();
 
